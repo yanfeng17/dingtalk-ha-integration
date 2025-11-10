@@ -1,0 +1,54 @@
+send_message:
+  name: 发送消息
+  description: 发送文本消息到钉钉用户或群组
+  fields:
+    target:
+      name: 目标
+      description: 目标用户ID或群组ID
+      required: true
+      example: "12345678"
+      selector:
+        text:
+    message:
+      name: 消息内容
+      description: 要发送的文本消息
+      required: true
+      example: "Hello from Home Assistant!"
+      selector:
+        text:
+          multiline: true
+    at_list:
+      name: @ 用户列表
+      description: 在群聊中要@的用户ID列表（可选）
+      required: false
+      example: ["user1", "user2"]
+      selector:
+        object:
+
+send_markdown:
+  name: 发送Markdown消息
+  description: 发送Markdown格式消息到钉钉
+  fields:
+    target:
+      name: 目标
+      description: 目标用户ID或群组ID
+      required: true
+      example: "12345678"
+      selector:
+        text:
+    title:
+      name: 标题
+      description: 消息标题
+      required: false
+      default: "通知"
+      example: "系统通知"
+      selector:
+        text:
+    content:
+      name: Markdown内容
+      description: Markdown格式的消息内容
+      required: true
+      example: "# 标题\n\n**粗体文本**\n\n- 列表项1\n- 列表项2"
+      selector:
+        text:
+          multiline: true

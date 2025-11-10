@@ -1,0 +1,25 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "配置钉钉 Gateway",
+        "description": "输入钉钉 Gateway 服务的连接信息",
+        "data": {
+          "base_url": "Gateway 服务地址",
+          "access_token": "访问令牌（可选）"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "更新钉钉 Gateway 配置",
+        "data": {
+          "base_url": "Gateway 服务地址",
+          "access_token": "访问令牌（可选）"
+        }
+      }
+    }
+  }
+}
