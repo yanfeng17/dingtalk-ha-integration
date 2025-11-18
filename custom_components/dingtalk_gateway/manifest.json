@@ -5,7 +5,7 @@
   "iot_class": "local_push",
   "config_flow": true,
   "requirements": [],
-  "codeowners": ["@factory-droid"],
+  "codeowners": ["@yanfeng17"],
   "documentation": "",
   "integration_type": "hub"
 }
