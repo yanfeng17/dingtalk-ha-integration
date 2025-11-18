@@ -35,22 +35,22 @@ jobs:
       - name: Update manifest version
         run: |
           VERSION=${GITHUB_REF#refs/tags/v}
-          sed -i "s/\"version\": \".*\"/\"version\": \"$VERSION\"/" custom_components/dingtalk-ha-integration/manifest.json
+          sed -i "s/\"version\": \".*\"/\"version\": \"$VERSION\"/" custom_components/dingtalk_gateway/manifest.json
           echo "Updated manifest version to: $VERSION"
-          cat custom_components/dingtalk-ha-integration/manifest.json
+          cat custom_components/dingtalk_gateway/manifest.json
 
 
       # 2. 创建 ZIP 文件（排除不需要的目录/文件）
       - name: Create ZIP
         run: |
           echo "Creating ZIP file..."
-          cd custom_components/dingtalk-ha-integration
-          zip -r ../../dingtalk-ha-integration.zip . -x "__pycache__/*" "*.pyc"
+          cd custom_components/dingtalk_gateway
+          zip -r ../../dingtalk_gateway.zip . -x "__pycache__/*" "*.pyc"
           cd ../..
           echo "ZIP file created:"
-          ls -la dingtalk-ha-integration.zip
+          ls -la dingtalk_gateway.zip
           echo "ZIP file contents:"
-          unzip -l dingtalk-ha-integration.zip
+          unzip -l dingtalk_gateway.zip
 
 
       # 3. 上传 ZIP 到 Release
@@ -60,6 +60,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ./dingtalk-ha-integration.zip
-          asset_name: dingtalk-ha-integration.zip
+          asset_path: ./dingtalk_gateway.zip
+          asset_name: dingtalk_gateway.zip
           asset_content_type: application/zip
