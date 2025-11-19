@@ -2,10 +2,11 @@
   "domain": "dingtalk_gateway",
   "name": "DingTalk Gateway",
   "version": "0.1.0",
-  "iot_class": "local_push",
+  "iot_class": "cloud_polling",
   "config_flow": true,
   "requirements": [],
-  "codeowners": ["@factory-droid"],
-  "documentation": "",
+  "codeowners": ["@yanfeng17"],
+  "documentation": "https://github.com/yanfeng17/dingtalk-ha-integration",
+  "issue_tracker": "https://github.com/yanfeng17/dingtalk-ha-integration/issues",
   "integration_type": "hub"
 }

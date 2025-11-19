@@ -1,0 +1,9 @@
+{
+    "name": "DingTalk Gateway",
+    "content_in_root": false,
+    "render_readme": true,
+    "zip_release": true,
+    "filename": "dingtalk_gateway.zip",
+    "country": "CN",
+    "homeassistant": "2023.9.0"
+}
